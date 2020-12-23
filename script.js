@@ -1,9 +1,10 @@
+document.querySelector('.choice_alert').innerHTML="";
+document.querySelector('.check_alert').innerHTML='';
 document.querySelector('.select').addEventListener('click', select);
 let re;
 let str;
 function select(){
     let choice = document.querySelector('.choice').value;
-    console.log(choice);
     
     if(choice == 1){
         re = /^[a-zA-Z0-9(\.)?(\-)?]+@[a-zA-Z0-9(\.)?]+$/;
@@ -34,4 +35,9 @@ function valid(){
     else{
         document.querySelector('.check_alert').innerHTML='Unmatched';
     }
+}
+
+document.querySelector('.refresh').addEventListener('click', refresh);
+function refresh(){
+    location = location;
 }
