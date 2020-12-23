@@ -7,11 +7,11 @@ function select(){
     let choice = document.querySelector('.choice').value;
     
     if(choice == 1){
-        re = /^[a-zA-Z0-9(\.)?(\-)?]+@[a-zA-Z0-9(\.)?]+$/;
+        re = /^([a-zA-Z0-9](\.)?(\-)?)+[^\.]@([a-zA-Z0-9]\.?)+[^\.]$/;;
         document.querySelector('.choice_alert').innerHTML="Choosed for Email validation";
     }
     else if(choice == 2){
-        re = /^(\+)?(880)?[0-9]{10}$/;
+        re = /^(\+)?(880)?(0)?[0-9]{10}$/;
         document.querySelector('.choice_alert').innerHTML="Choosed for Phone No. validation";
     }
     else if(choice == 3){
